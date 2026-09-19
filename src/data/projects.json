@@ -3,8 +3,15 @@
     "title": "Cinerat - Tu catálogo de películas en Telegram",
     "description": "Canal de Telegram donde comparto +1600 películas en latino y/o castellano para descargar, con más de 17.7k suscriptores. Ecosistema completo creado desde cero: el bot que distribuye las películas, el CMS y la web para explorar el catálogo. El CMS es una API REST con arquitectura en capas (controller-service-repository), validación con Zod, PostgreSQL, testing con Vitest y manejo de errores con el estándar Problem Details. De momento solo el backend es público.",
     "link": "https://t.me/peliculasespanolfree",
+    "linkLabel": "Canal",
     "github": "https://github.com/antoinepdev/telegram-file-gatekeeper",
     "cms": "https://github.com/antoinepdev/cinerat-cms",
+    "links": [
+      {
+        "label": "Catálogo",
+        "url": "https://antoinepdev.github.io/cinerat-web/"
+      }
+    ],
     "image": "/projects/cinerat.svg",
     "tags": ["NODE", "BOT", "TS", "ZOD", "POSTGRES", "VITEST", "REACT", "TAILWIND"]
   },
