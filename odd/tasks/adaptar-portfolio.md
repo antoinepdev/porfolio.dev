@@ -49,19 +49,21 @@ El usuario quiere un portfolio personal con su identidad y sus proyectos reales,
 
 - [x] P1 Inventario de datos de Midudev (mapeo)
 - [x] P2 Recopilar datos del usuario (entrevista)
-- [ ] P3 Layout.astro: identidad, JSON-LD, og:site_name, quitar twitter
-- [ ] P4 Hero.astro: nombre, intro, Telegram, quitar LinkedIn, badge → mailto
-- [ ] P5 AboutMe.astro: bio 3 párrafos + limpiar comentarios
-- [ ] P6 Header.astro: nav (sin Experiencia, con Tecnologías) + mailto
-- [ ] P7 Footer.astro: nombre + mailto
-- [ ] P8 index.astro: SEO, quitar Experiencia, agregar Tecnologías
-- [ ] P9 Skills.astro + skills.json
-- [ ] P10 projects.json + placeholders SVG
-- [ ] P11 Projects.astro: extender TAGS
-- [ ] P12 Icono Telegram.astro
-- [ ] P13 Eliminar archivos de Midudev
-- [ ] P14 components.astro sin LinkedIn
-- [ ] P15 Build de verificación (bun run build)
+- [x] P3 Layout.astro: identidad, JSON-LD, og:site_name, quitar twitter
+- [x] P4 Hero.astro: nombre, intro, Telegram, quitar LinkedIn, badge → mailto
+- [x] P5 AboutMe.astro: bio 3 párrafos + limpiar comentarios
+- [x] P6 Header.astro: nav (sin Experiencia, con Tecnologías) + mailto
+- [x] P7 Footer.astro: nombre + mailto
+- [x] P8 index.astro: SEO, quitar Experiencia, agregar Tecnologías
+- [x] P9 Skills.astro + skills.json
+- [x] P10 projects.json + placeholders SVG
+- [x] P11 Projects.astro: extender TAGS
+- [x] P12 Icono Telegram.astro
+- [x] P13 Eliminar archivos de Midudev
+- [x] P14 components.astro sin LinkedIn
+- [x] P15 Build de verificación (bun run build)
+
+PENDIENTE (decisión usuario): deploy a GitHub Pages — astro.config.mjs (site/base) y workflow .github/workflows/deploy.yml se harán después
 
 ## Criterios de aceptación
 
@@ -83,4 +85,8 @@ INLINE (con delegación intentada). Disparadores de delegación activados (4+ ar
 
 ## Progreso
 
-- 2026-09-19: inventario completo + entrevista de datos terminada. Arranca implementación.
+- 2026-09-19: inventario completo + entrevista de datos terminada. Implementación completa: commit `53f2d0e` ("feat: adapt portfolio to Antoine Peña Amores") en `main` (el runtime bloqueó `git checkout`, por lo que el commit quedó en main en vez de feature branch; la branch fe/adaptar-portfolio creada quedó vacía y se eliminó).
+- Verificación: `bun run build` → 0 errores, 0 warnings, 0 hints (astro check) + build OK (2 páginas). Verificado en dist/index.html: sin referencias a midudev, hero con "Antoine", Telegram/GitHub/mailto de Antoine, 4 grupos de tecnologías renderizados.
+- 2026-09-19 (2da iteración): corregidas descripciones y stacks de proyectos leyendo los READMEs reales (branch main + gatekeeper del bot, Shine.dots) y el código del backend de cinerat-cms (Express 5, TypeScript, pg, Zod 4, Vitest, node-telegram-bot-api, Problem Details application/problem+json, capas controller-service-repository). Gatekeeper: sin mongoose (usa grupo privado de Telegram como DB), +node-telegram-bot-api +TypeScript. Cinerat: sin mongoose, +TS/Zod/PostgreSQL/Vitest/node-telegram-bot-api, nuevo botón CMS (solo backend público). Shine.dots: descripción real (Arch Linux + GNU Stow, Hyprland, waybar, Ghostty/Kitty, Helix, Bash+zoxide+starship). skill.json NO se tocó (mongoose sigue en Tecnologías por decisión previa del usuario).
+- Commit corrección: pendiente en esta iteración.
+- Pendiente: deploy GitHub Pages (config site/base + workflow Actions).

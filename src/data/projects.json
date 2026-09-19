@@ -1,22 +1,23 @@
 [
   {
     "title": "Cinerat - Tu catálogo de películas en Telegram",
-    "description": "Canal de Telegram donde comparto +1600 películas en latino y/o castellano para descargar, con más de 17.7k suscriptores. Ecosistema completo creado desde cero: el bot que distribuye las películas, el CMS para administrar el catálogo y la web para explorar cada película.",
+    "description": "Canal de Telegram donde comparto +1600 películas en latino y/o castellano para descargar, con más de 17.7k suscriptores. Ecosistema completo creado desde cero: el bot que distribuye las películas, el CMS y la web para explorar el catálogo. El CMS es una API REST con arquitectura en capas (controller-service-repository), validación con Zod, PostgreSQL, testing con Vitest y manejo de errores con el estándar Problem Details. De momento solo el backend es público.",
     "link": "https://t.me/peliculasespanolfree",
     "github": "https://github.com/antoinepdev/telegram-file-gatekeeper",
+    "cms": "https://github.com/antoinepdev/cinerat-cms",
     "image": "/projects/cinerat.svg",
-    "tags": ["NODE", "BOT", "MONGOOSE", "REACT", "TAILWIND"]
+    "tags": ["NODE", "BOT", "TS", "ZOD", "POSTGRES", "VITEST", "REACT", "TAILWIND"]
   },
   {
-    "title": "Telegram File Gatekeeper - Comparte archivos y crece",
-    "description": "Bot de Telegram que funciona como puerta de entrada del canal: comparte archivos mediante enlaces y recompensa a quienes invitan a más suscriptores, haciendo crecer la comunidad de forma orgánica. Es el motor de distribución del ecosistema Cinerat.",
+    "title": "Telegram File Gatekeeper - Comparte archivos y haz crecer tu canal",
+    "description": "Bot de Telegram con Node.js y node-telegram-bot-api que genera enlaces permanentes para compartir archivos. Usa un grupo privado de Telegram como base de datos: solo los administradores suben contenido y el bot lo distribuye a cualquiera con el enlace, sin costo ni exposición del grupo. El sistema Gatekeeper obliga a unirse a tu grupo o canal antes de descargar, convirtiendo cada descarga en un nuevo suscriptor.",
     "github": "https://github.com/antoinepdev/telegram-file-gatekeeper",
     "image": "/projects/gatekeeper.svg",
-    "tags": ["NODE", "BOT", "MONGOOSE"]
+    "tags": ["NODE", "BOT", "TS"]
   },
   {
-    "title": "Shine.dots - Mis dotfiles de Linux",
-    "description": "Mi configuración de Linux lista para instalar: herramientas, atajos y ajustes que me hacen productivo en el día a día. Un reflejo de mi flujo de trabajo real como desarrollador.",
+    "title": "Shine.dots - Dotfiles de Arch Linux con GNU Stow",
+    "description": "Mi configuración personal de Arch Linux gestionada con GNU Stow. Soporta el gestor de ventanas Hyprland (con waybar, hyprpaper y control de brillo y sonido), los terminales Ghostty y Kitty, el editor Helix precargado con language servers y Bash con zoxide y starship.",
     "github": "https://github.com/antoinepdev/Shine.dots",
     "image": "/projects/shine.svg",
     "tags": ["LINUX", "BASH"]
