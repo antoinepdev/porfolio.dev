@@ -1,0 +1,18 @@
+[
+  {
+    "category": "Backend",
+    "skills": ["Node.js", "Express", "Mongoose", "Zod", "PostgreSQL", "Python", "node-telegram-bot-api"]
+  },
+  {
+    "category": "Frontend",
+    "skills": ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Tailwind CSS", "Astro"]
+  },
+  {
+    "category": "Testing",
+    "skills": ["Vitest"]
+  },
+  {
+    "category": "Herramientas y entorno",
+    "skills": ["Bun", "Git", "GitHub Actions", "Linux", "Bash"]
+  }
+]

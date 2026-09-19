@@ -2,19 +2,19 @@
 import Layout from "@/layouts/Layout.astro"
 
 import AboutMe from "@/components/AboutMe.astro"
-import Briefcase from "@/components/icons/Briefcase.astro"
+import Code from "@/components/icons/Code.astro"
 import CodeDots from "@/components/icons/CodeDots.astro"
-import Experience from "@/components/Experience.astro"
-import UserHeart from "@/components/icons/UserHeart.astro"
+import Hero from "@/components/Hero.astro"
 import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
-import Hero from "@/components/Hero.astro"
+import Skills from "@/components/Skills.astro"
 import TitleSection from "@/components/TitleSection.astro"
+import UserHeart from "@/components/icons/UserHeart.astro"
 ---
 
 <Layout
-  title="Porfolio de midudev - Desarrollador y Programador Web con 15 años de experiencia"
-  description="Contrata a midudev para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
+  title="Antoine Peña Amores - Desarrollador Fullstack especializado en Backend"
+  description="Portfolio de Antoine Peña Amores. Desarrollador Fullstack de Cuba especializado en backend. Creador del ecosistema Cinerat, un canal de Telegram con más de 17.7k suscriptores."
 >
   <main class="px-4">
     <SectionContainer class="py-16 md:py-36">
@@ -22,12 +22,12 @@ import TitleSection from "@/components/TitleSection.astro"
     </Hero>
     </SectionContainer>
     <div class="space-y-24">
-    <SectionContainer id="experiencia">
+    <SectionContainer id="tecnologias">
       <TitleSection>
-        <Briefcase class="size-8" />
-        Experiencia laboral
+        <Code class="size-7" />
+        Tecnologías
       </TitleSection>
-      <Experience />
+      <Skills />
     </SectionContainer>
 
     <SectionContainer id="proyectos">

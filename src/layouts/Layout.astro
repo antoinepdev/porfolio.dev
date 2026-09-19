@@ -14,7 +14,7 @@ interface Props {
 const {
   description,
   title,
-  image = "/porfolio.webp",
+  image = "/me.jpg",
   canonical = Astro.url.href,
 } = Astro.props;
 
@@ -24,17 +24,16 @@ const ogImage = new URL(image, siteUrl).toString();
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Miguel Ángel Durán",
+  name: "Antoine Miguel Peña Amores",
   url: siteUrl,
   sameAs: [
-    "https://linkedin.com/in/midudev",
-    "https://github.com/midudev",
-    "https://twitter.com/midudev",
+    "https://github.com/antoinepdev",
+    "https://t.me/antoinepdev",
   ],
-  jobTitle: "Ingeniero de Software y Creador de Contenido",
+  jobTitle: "Desarrollador Fullstack especializado en Backend",
   worksFor: {
     "@type": "Organization",
-    name: "Freelance",
+    name: "Independiente",
   },
 };
 ---
@@ -45,7 +44,7 @@ const jsonLd = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="author" content="Miguel Ángel Durán" />
+    <meta name="author" content="Antoine Miguel Peña Amores" />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Canonical -->
@@ -60,15 +59,7 @@ const jsonLd = {
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="es_ES" />
-    <meta property="og:site_name" content="midudev · Porfolio" />
-
-    <!-- Twitter / X -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@midudev" />
-    <meta name="twitter:creator" content="@midudev" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
+    <meta property="og:site_name" content="Antoine Peña Amores · Porfolio" />
 
     <!-- JSON-LD structured data -->
     <script

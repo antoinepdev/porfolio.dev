@@ -1,17 +1,24 @@
 [
   {
-    "title": "SVGL - A beautiful library with SVG logos",
-    "description": "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    "link": "https://svgl.vercel.app/",
-    "github": "https://github.com/pheralb/svgl",
-    "image": "/projects/svgl.webp",
-    "tags": ["NEXT", "TAILWIND"]
+    "title": "Cinerat - Tu catálogo de películas en Telegram",
+    "description": "Canal de Telegram donde comparto +1600 películas en latino y/o castellano para descargar, con más de 17.7k suscriptores. Ecosistema completo creado desde cero: el bot que distribuye las películas, el CMS para administrar el catálogo y la web para explorar cada película.",
+    "link": "https://t.me/peliculasespanolfree",
+    "github": "https://github.com/antoinepdev/telegram-file-gatekeeper",
+    "image": "/projects/cinerat.svg",
+    "tags": ["NODE", "BOT", "MONGOOSE", "REACT", "TAILWIND"]
   },
   {
-    "title": "AdventJS - Retos de programación con JavaScript y TypeScript",
-    "description": "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    "link": "https://adventjs.dev",
-    "image": "/projects/adventjs.webp",
-    "tags": ["NEXT", "TAILWIND"]
+    "title": "Telegram File Gatekeeper - Comparte archivos y crece",
+    "description": "Bot de Telegram que funciona como puerta de entrada del canal: comparte archivos mediante enlaces y recompensa a quienes invitan a más suscriptores, haciendo crecer la comunidad de forma orgánica. Es el motor de distribución del ecosistema Cinerat.",
+    "github": "https://github.com/antoinepdev/telegram-file-gatekeeper",
+    "image": "/projects/gatekeeper.svg",
+    "tags": ["NODE", "BOT", "MONGOOSE"]
+  },
+  {
+    "title": "Shine.dots - Mis dotfiles de Linux",
+    "description": "Mi configuración de Linux lista para instalar: herramientas, atajos y ajustes que me hacen productivo en el día a día. Un reflejo de mi flujo de trabajo real como desarrollador.",
+    "github": "https://github.com/antoinepdev/Shine.dots",
+    "image": "/projects/shine.svg",
+    "tags": ["LINUX", "BASH"]
   }
 ]
