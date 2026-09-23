@@ -19,7 +19,7 @@ import SocialPill from "@/components/SocialPill.astro"
       </div>
       <img
         class="relative rounded-full shadow-2xl size-20 ring-2 ring-yellow-400/60 ring-offset-2 ring-offset-gray-50 dark:ring-offset-gray-950"
-        src="/me.jpg"
+        src={`${import.meta.env.BASE_URL}me.jpg`}
         alt={personalImageAlt}
       />
     </div>

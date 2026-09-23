@@ -18,8 +18,8 @@ const {
   canonical = Astro.url.href,
 } = Astro.props;
 
-const siteUrl = "https://porfolio.dev";
-const ogImage = new URL(image, siteUrl).toString();
+const siteUrl = "https://antoinepdev.github.io/porfolio.dev/";
+const ogImage = new URL(image.replace(/^\//, ""), siteUrl).toString();
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -67,7 +67,7 @@ const jsonLd = {
       set:html={JSON.stringify(jsonLd)}
     />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
     <title>{title}</title>
     <meta name="darkreader-lock" />
     <ViewTransitions />
@@ -83,7 +83,7 @@ const jsonLd = {
     <!-- Grain texture overlay for tactile depth -->
     <div
       class="pointer-events-none fixed inset-0 z-[-1] opacity-[0.035] dark:opacity-[0.05]"
-      style="background-image: url('/noise.svg'); background-size: 200px 200px;"
+      style={`background-image: url('${import.meta.env.BASE_URL}noise.svg'); background-size: 200px 200px;`}
       aria-hidden="true"
     >
     </div>
