@@ -1,0 +1,50 @@
+---
+import { getCollection } from "astro:content"
+import ArrowRight from "@/components/icons/ArrowRight.astro"
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+)
+---
+
+{
+  posts.length === 0 ? (
+    <p class="text-gray-600 dark:text-gray-400">
+      Aún no hay artículos publicados.
+    </p>
+  ) : (
+    <div class="flex flex-col gap-y-6">
+      {posts.map((post) => {
+        const formattedDate = post.data.date.toLocaleDateString("es-ES", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          timeZone: "UTC",
+        })
+
+        return (
+          <a
+            href={`/blog/${post.slug}`}
+            class="group block rounded-2xl border border-gray-200 dark:border-white/10 p-6 transition-all duration-300 hover:border-yellow-400/40 hover:bg-yellow-400/5"
+          >
+            <time class="text-sm text-gray-500 dark:text-gray-400">
+              {formattedDate}
+            </time>
+            <h3 class="mt-2 text-xl font-bold text-gray-800 dark:text-gray-100 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors">
+              {post.data.title}
+            </h3>
+            <p class="mt-2 text-gray-600 dark:text-gray-400 text-pretty">
+              {post.data.description}
+            </p>
+            <span
+              class="mt-4 inline-flex items-center gap-x-1 text-sm font-medium text-yellow-600 dark:text-yellow-400"
+            >
+              Leer artículo
+              <ArrowRight class="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </span>
+          </a>
+        )
+      })}
+    </div>
+  )
+}

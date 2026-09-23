@@ -1,0 +1,110 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import ArrowLeft from "@/components/icons/ArrowRight.astro"
+import { getCollection } from "astro:content"
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog")
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }))
+}
+
+const {
+  post,
+}: {
+  post: any
+} = Astro.props
+
+const { Content } = await post.render()
+
+const formattedDate = post.data.date.toLocaleDateString("es-ES", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  timeZone: "UTC",
+})
+const dateISO = post.data.date.toISOString().slice(0, 10)
+---
+
+<Layout
+  title={`${post.data.title} - Antoine Peña Amores`}
+  description={post.data.description}
+>
+  <main class="px-4 pt-28 pb-24">
+    <article
+      class="article w-full mx-auto container lg:max-w-3xl md:max-w-2xl"
+    >
+      <a
+        href="/#blog"
+        class="inline-flex items-center gap-x-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-400 transition-colors"
+      >
+        <ArrowLeft class="size-4 rotate-180" />
+        Volver al blog
+      </a>
+
+      <header class="mt-6">
+        <time
+          datetime={dateISO}
+          class="text-sm text-gray-500 dark:text-gray-400"
+        >
+          {formattedDate}
+        </time>
+        <h1
+          class="mt-2 text-3xl md:text-4xl font-bold tracking-tight text-black/80 dark:text-white"
+        >
+          {post.data.title}
+        </h1>
+        <p class="mt-3 text-gray-600 dark:text-gray-300 text-pretty">
+          {post.data.description}
+        </p>
+      </header>
+
+      <hr
+        class="mt-8 mb-10 border-gray-200 dark:border-white/10"
+      />
+
+      <Content />
+    </article>
+  </main>
+</Layout>
+
+<style is:global>
+  .article {
+    @apply text-gray-700 dark:text-gray-300;
+  }
+
+  .article h1 {
+    @apply mt-2 text-3xl md:text-4xl font-bold tracking-tight text-black/80 dark:text-white;
+  }
+
+  .article h2 {
+    @apply mt-10 text-2xl font-bold tracking-tight text-black/80 dark:text-white;
+  }
+
+  .article p {
+    @apply mt-5 leading-relaxed text-pretty;
+  }
+
+  .article p:first-of-type {
+    @apply mt-6;
+  }
+
+  .article a {
+    @apply font-medium text-yellow-600 dark:text-yellow-400 underline underline-offset-2 hover:text-yellow-700 dark:hover:text-yellow-300;
+  }
+
+  .article ul {
+    @apply mt-5 space-y-2 list-disc list-inside;
+  }
+
+  .article ol {
+    @apply mt-5 space-y-2 list-decimal list-inside;
+  }
+
+  .article hr {
+    @apply mt-10 border-gray-200 dark:border-white/10;
+  }
+</style>

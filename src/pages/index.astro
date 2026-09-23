@@ -2,9 +2,11 @@
 import Layout from "@/layouts/Layout.astro"
 
 import AboutMe from "@/components/AboutMe.astro"
+import Book from "@/components/icons/Book.astro"
 import Code from "@/components/icons/Code.astro"
 import CodeDots from "@/components/icons/CodeDots.astro"
 import Hero from "@/components/Hero.astro"
+import Posts from "@/components/Posts.astro"
 import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
 import Skills from "@/components/Skills.astro"
@@ -44,6 +46,14 @@ import UserHeart from "@/components/icons/UserHeart.astro"
         Sobre mí
       </TitleSection>
       <AboutMe />
+    </SectionContainer>
+
+    <SectionContainer id="blog">
+      <TitleSection>
+        <Book class="size-7" />
+        Blog
+      </TitleSection>
+      <Posts />
     </SectionContainer>
   </div>
   </main>
