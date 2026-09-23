@@ -34,9 +34,7 @@ const dateISO = post.data.date.toISOString().slice(0, 10)
   description={post.data.description}
 >
   <main class="px-4 pt-28 pb-24">
-    <article
-      class="article w-full mx-auto container lg:max-w-3xl md:max-w-2xl"
-    >
+    <div class="w-full mx-auto container lg:max-w-3xl md:max-w-2xl">
       <a
         href="/#blog"
         class="inline-flex items-center gap-x-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-yellow-500 dark:hover:text-yellow-400 transition-colors"
@@ -65,7 +63,34 @@ const dateISO = post.data.date.toISOString().slice(0, 10)
       <hr
         class="mt-8 mb-10 border-gray-200 dark:border-white/10"
       />
+    </div>
 
+    {
+      post.data.image && (
+        <figure class="w-full mx-auto container lg:max-w-5xl md:max-w-4xl my-8">
+          <a
+            href={post.data.image}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block group"
+          >
+            <img
+              src={post.data.image}
+              alt={post.data.title}
+              class="w-full rounded-2xl border border-gray-200 dark:border-white/10 transition-opacity duration-300 group-hover:opacity-90"
+              loading="eager"
+            />
+          </a>
+          <figcaption
+            class="mt-2 text-center text-xs text-gray-500 dark:text-gray-400"
+          >
+            Infografía — clic para ver en tamaño completo
+          </figcaption>
+        </figure>
+      )
+    }
+
+    <article class="article w-full mx-auto container lg:max-w-3xl md:max-w-2xl">
       <Content />
     </article>
   </main>
