@@ -31,15 +31,15 @@ const navItems = [
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-4"
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-4 px-2"
 >
   <nav
-    class="header-nav flex gap-x-1 px-4 py-1.5 text-sm font-medium rounded-full text-gray-600 dark:text-gray-300 justify-center items-center border border-transparent"
+    class="header-nav flex gap-x-1 px-4 py-1.5 text-sm font-medium rounded-full text-gray-600 dark:text-gray-300 justify-center items-center border border-transparent max-w-full overflow-x-auto no-scrollbar"
   >
     {
       navItems.map((link) => (
         <a
-          class="nav-link relative text-xs sm:text-sm block px-1.5 sm:px-3 py-2 sm:py-1.5 rounded-full transition-colors duration-200 hover:text-yellow-500 dark:hover:text-yellow-400"
+          class="nav-link relative text-xs sm:text-sm block px-1.5 sm:px-3 py-2 sm:py-1.5 rounded-full whitespace-nowrap transition-colors duration-200 hover:text-yellow-500 dark:hover:text-yellow-400"
           aria-label={link.label}
           href={link.url}
         >
@@ -47,7 +47,7 @@ const navItems = [
         </a>
       ))
     }
-    <div class="ml-2 pl-2 border-l border-gray-300/30 dark:border-white/10">
+    <div class="ml-2 pl-2 border-l border-gray-300/30 dark:border-white/10 shrink-0">
       <ThemeToggle />
     </div>
   </nav>
@@ -97,6 +97,14 @@ const navItems = [
 </script>
 
 <style>
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
   .header-nav {
     animation: nav-appear 1s linear both;
     animation-timeline: scroll();
