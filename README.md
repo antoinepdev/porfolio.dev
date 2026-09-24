@@ -1,6 +1,6 @@
-# Portfolio — Antoine Peña Amores
+# Portfolio — Antoine Miguel Peña Amores
 
-Personal portfolio and professional card for **Antoine Peña Amores**, a
+Personal portfolio and professional card for **Antoine Miguel Peña Amores**, a
 fullstack developer from Cuba specialized in backend development.
 
 Built with **Astro**, **Tailwind CSS** and **TypeScript**.
@@ -36,7 +36,7 @@ This project is an **adapted work** based on the original portfolio by
 - Original repository: <https://github.com/midudev/porfolio.dev>
 - Original author: Miguel Ángel Durán García — <https://midu.dev>
 
-This adapted version was created by **Antoine Peña Amores** and retains the
+This adapted version was created by **Antoine Miguel Peña Amores** and retains the
 original copyright notice, license notice, and attribution requirements of
 the original work, which is licensed under the
 [Creative Commons Attribution-NonCommercial 4.0 International](https://creativecommons.org/licenses/by-nc/4.0/)
